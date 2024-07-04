@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+require('dotenv').config();
+const port = process.env.PORT
 const route = require("./routes/clients/index.route")
+
 app.set("views", "./views")
 app.set("view engine", "pug")
 route(app);
 
 app.listen(port, ()=> {
-    console.log(`App listen on port ${port}`);
+    console.log(port);
 }) 
