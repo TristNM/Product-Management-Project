@@ -3,3 +3,4 @@ module.exports.products = (req, res) => {
         title: "Products"
     })
 }
+
