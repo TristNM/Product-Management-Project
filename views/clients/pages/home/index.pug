@@ -1,4 +1,33 @@
 extends ../../layouts/default.pug
-block main  
-    h1 Trang chủ 
-        
+include ../../mixins/box-head.pug
+block main
+    .container.my-3
+        .row
+            .col-12
+                +box-head("Welcome to Trohan Store")
+        .row
+            .col-12
+                .hero-section
+                    img(src="https://static.vecteezy.com/system/resources/previews/007/131/902/non_2x/game-shop-with-bag-logo-concept-icon-gaming-or-symbol-logo-free-vector.jpg" alt="Trohan Store" class="hero-image")
+                    .hero-content
+                        h1 Welcome to Trohan Store
+                        p Discover the best games at unbeatable prices. Browse our selection and find your next favorite game!
+                        a.btn.btn-primary(href="/products") Shopping Now
+        //- .row.mt-5
+        //-     .col-12
+        //-         +box-head("Featured Products")
+        //- .row.grid-container
+        //-     each item in products 
+        //-         .col-12.col-md-6.col-lg-4.grid-item
+        //-             .product-item 
+        //-                 .inner-image  
+        //-                     img(src=item.thumbnail alt=item.title class='product-image')
+        //-                 .inner-content 
+        //-                     h3.product-title #{item.title}
+        //-                     p.product-description #{item.description}
+        //-                     p.product-price $#{item.price}
+        //-                     br
+        //-                     if item.stock > 0
+        //-                         button(type='button' class='btn-add-to-cart') Add to Cart
+        //-                     else
+        //-                         button(type='button' class='btn-out-of-stock' disabled) Out of Stock
