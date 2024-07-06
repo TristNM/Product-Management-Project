@@ -1,28 +1,23 @@
 extends ../../layouts/default.pug
 include ../../mixins/box-head.pug
+
 block main    
     .container.my-3     
         .row 
             .col-12 
                 +box-head("Products")
-        .row 
-            .col-4.mb-3 
-                .product-item 
-                    .inner-image  
-                        img(src="/images/sekiro.jpg" alt='Sekiro Cover' class='product-image')
-                    .inner-content 
-                        h3.product-title Sekiro: Shadows Die Twice
-                        p.product-description Experience the critically acclaimed action-adventure game where you embark on a quest for vengeance.
-                        p.product-price $59.99
-                        br
-                        button(type='button') Add to Cart
-            .col-4.mb-3 
-                .product-item 
-                    .inner-image  
-                        img(src="/images/Elden_Ring.jpg" alt='Elden Ring Cover' class='product-image')
-                    .inner-content 
-                        h3.product-title Elden Ring
-                        p.product-description Discover the latest fantasy action RPG from FromSoftware, featuring a vast world full of danger and secrets.
-                        p.product-price $69.99
-                        br
-                        button(type='button') Add to Cart
+        .row  
+            each item in products 
+                .col-4.mb-3 
+                    .product-item 
+                        .inner-image  
+                            img(src=item.thumbnail alt=item.title class='product-image')
+                        .inner-content 
+                            h3.product-title #{item.title}
+                            p.product-description #{item.description}
+                            p.product-price $#{item.price}
+                            br
+                            if item.stock > 0
+                                button(type='button') Add to Cart
+                            else
+                                button(type='button' disabled) Out of Stock
