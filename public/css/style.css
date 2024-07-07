@@ -55,9 +55,6 @@
     color: red;
 }
 
-
-
-
 .header {
     background-color: #343a40;
     color: white;
@@ -169,7 +166,7 @@ body.dark-mode .hero-section {
     padding: 10px 20px;
     font-size: 15px;
     color: #fff;
-    background-color: #3498db;
+    background-color: rgb(176, 66, 12);
     border: none;
     border-radius: 4px;
     cursor: pointer;

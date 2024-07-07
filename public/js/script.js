@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const body = document.body;
 
     // Load theme from localStorage
-    const currentTheme = localStorage.getItem('theme');
+    const currentTheme = localStorage.getItem( 'theme');
     if (currentTheme) {
         body.classList.add(currentTheme);
     } else {
@@ -21,5 +21,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             body.classList.add('light-mode');
             localStorage.setItem('theme', 'light-mode');
         }
+    });
+});
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.toggle-btn');
+    const sider = document.querySelector('.sider');
+    const main = document.querySelector('.main');
+
+    toggleButton.addEventListener('click', function() {
+        sider.classList.toggle('show');
+        main.classList.toggle('shift');
     });
 });

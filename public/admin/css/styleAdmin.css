@@ -1,0 +1,86 @@
+/* styleAdmin.css */
+
+/* General styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 100px; /* Define a fixed height for the header */
+}
+
+.sider {
+    width: 250px;
+    position: fixed;
+    top: 100px; /* Move the sider below the header */
+    left: -250px; /* Initially hidden */
+    height: calc(100% - 60px); /* Adjust height to account for the header */
+    background-color: #343a40;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+}
+
+.sider.show {
+    left: 0;
+}
+
+.sider a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+}
+
+.sider a:hover {
+    background-color: #495057;
+}
+
+.sider .active {
+    background-color: rgb(176, 66, 12)
+}
+
+.main {
+    margin-left: 0px;
+    padding: 20px;
+    margin-top: 100px; /* Adjust top margin to account for the header */
+    transition: margin-left 0.3s ease;
+}
+
+.main.shift {
+    margin-left: 250px;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 15px; /* Adjust according to header height */
+    left: 15px;
+    background-color: rgb(176, 66, 12);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+.toggle-btn:focus {
+    outline: none;
+}
