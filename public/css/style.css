@@ -162,6 +162,8 @@ body.dark-mode .hero-section {
     color: inherit;
 }
 
+
+
 .btn-primary {
     padding: 10px 20px;
     font-size: 15px;
@@ -171,7 +173,18 @@ body.dark-mode .hero-section {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
 
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #fff;
+    background-color: rgb(176, 66, 12);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    float: right;  /* Add this line */
 }
 
 .btn-primary:hover {

@@ -20,6 +20,18 @@ body {
     height: 100px; /* Define a fixed height for the header */
 }
 
+.admin_button{
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer; 
+    border-radius: 5px;
+    
+}
+
 .sider {
     width: 250px;
     position: fixed;
